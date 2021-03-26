@@ -1,0 +1,5 @@
+num(1..8).
+1{queen(I,J):num(I)}1 :- num(J).
+:- queen(I,J), queen(I,P),  J!=P.
+:- queen(I,J), queen(P,T), |I-P|== J-T, I!=P, J!=T.
+#show queen/2.
